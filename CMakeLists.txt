@@ -36,7 +36,7 @@ set(DIR_SOURCES    "${DIR_ROOT}/src")
 
 set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
 
-project (TJE_Framework_42 CXX)
+project (TJE_Framework_42_Test CXX)
 
 find_package(OpenGL REQUIRED)
 

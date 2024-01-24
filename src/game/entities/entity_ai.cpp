@@ -38,29 +38,6 @@ void EntityAI::update(float delta_time)
 {
 	World* world = World::get_instance();
 
-	if (type == AI_SHOOTER)
-	{
-		shoot(delta_time);
-	}
-	else if (type == AI_BREAKER)
-	{
-		if (has_collided) {
-			if (attack_timer->update(delta_time)) {
-				float new_time = animated ? anim.getCurrentAnimation()->duration : 3.0f;
-				attack_timer->set(new_time); // Attack once per second
-				World::get_instance()->hitTheWall();
-			}
-
-		} else {
-			moveTo(world->player->getGlobalMatrix().getTranslation(), delta_time);
-		}
-	}
-	// GOOD GUY
-	else
-	{
-
-	}
-
 	if (animated) {
 		anim.update(delta_time);
 	}

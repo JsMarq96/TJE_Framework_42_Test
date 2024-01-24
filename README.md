@@ -10,11 +10,13 @@ It contains the basics to do something nice:
 - Parser to load OBJ, PNG and TGA. Re-stores meshes in binary for faster load.
 - Supports skinned animated meshes using own format (you must use a web tool to convert them).
 
+This version is intended as a Test for the workshop with 42 barcelona in order to test before hand the framework's compatibility with their systems.
+
 ## Installation
 
 Clone and initialize the repository:
 ```
-git clone --recurse-submodules -j8 https://github.com/upf-gti/TJE_Framework_42.git
+git clone --recurse-submodules -j8 https://github.com/JsMarq96/TJE_Framework_42_Test.git
 ```
 
 The framework provided is compatible with all operating systems.

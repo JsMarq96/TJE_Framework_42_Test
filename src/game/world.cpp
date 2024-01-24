@@ -25,7 +25,7 @@ World::World()
 
 	// Create our camera
 	camera = new Camera();
-	camera->lookAt(Vector3(0.f, 20.f, -20.f), Vector3(0.f, 0.f, 0.f), Vector3::UP); //position the camera and point to 0,0,0
+	camera->lookAt(Vector3(5.f, 1.5f, -5.f), Vector3(0.f, 1.50f, 0.f), Vector3::UP); //position the camera and point to 0,0,0
 	camera->setPerspective(60.f, width / (float)height, 0.01f, 1000.f); //set the projection, we want to be perspective
 
 	// Configure 2d camera to render UI elements
@@ -47,7 +47,7 @@ World::World()
 		});
 
 	{
-		player = new EntityPlayer();
+		//player = new EntityPlayer();
 		landscape = new EntityMesh(Mesh::Get("data/meshes/cubemap/cubemap.ASE"), landscape_cubemap, "landscape");
 	}
 
@@ -58,7 +58,7 @@ World::World()
 		return static_cast<const EntityMesh*>(lhs)->material.shader < static_cast<const EntityMesh*>(rhs)->material.shader;
 	});
 
-	freeCam = false;
+	freeCam = true;
 
 	{
 		Material wall_material;
@@ -122,7 +122,7 @@ void World::checkCameraCollisions(Vector3& newEye)
 void World::render()
 {
 	// Render entity players
-	player->render(camera);
+	//player->render(camera);
 
 	// Render all scene tree
 	root.render(camera);
@@ -133,17 +133,17 @@ void World::render()
 
 void World::update(float delta_time)
 {
-	updateCamera(delta_time);
+	//updateCamera(delta_time);
 
 	root.update(delta_time);
 
-	player->update(delta_time);
+	//player->update(delta_time);
 
-	updateProjectiles(delta_time);
+	//updateProjectiles(delta_time);
 
-	updateWall(delta_time);
+	//updateWall(delta_time);
 
-	updateEnemySpawner(delta_time);
+	//updateEnemySpawner(delta_time);
 } 
 
 bool World::testRayToScene(Vector3 ray_origin, Vector3 ray_direction, Vector3& collision, Vector3& normal, bool get_closest, float max_ray_dist, bool in_object_space)
