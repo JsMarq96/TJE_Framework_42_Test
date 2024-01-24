@@ -10,7 +10,7 @@ It contains the basics to do something nice:
 - Parser to load OBJ, PNG and TGA. Re-stores meshes in binary for faster load.
 - Supports skinned animated meshes using own format (you must use a web tool to convert them).
 
-This version is intended as a Test for the workshop with 42 barcelona in order to test before hand the framework's compatibility with their systems.
+This version is intended as a Test for the workshop with 42 Barcelona technical school in order to test before hand the framework's compatibility with their systems.
 
 ## Installation
 
